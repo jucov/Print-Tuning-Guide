@@ -1,37 +1,37 @@
-# Introduction
+# Вступление
 
-Much of this guide is specific to printers running **Klipper**. 
+Большая часть этого руководства касается принтеров, работающих на **Klipper**.
 
-This guide was originally written for the Voron community, however all of the tuning sections should work on **any Klipper printer**. Some notes and hardware troubleshooting tips are still Voron specific, however.
-## Notes
+Это руководство изначально писалось для сообщества Voron, но все разделы настоек должны работать на **любом принтере под управлением Klipper**. Однако, некоторые заметки и советы касающиеся аппаратной части - все равно относятся именно к Voron принтерам. 
+## Заметки
 
-- My SuperSlicer profiles are located [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
+- Мой SuperSlicer профиль находится тут [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
-- If you have issues, comments, or suggestions about the guide, please let me know on GitHub issues or via Discord: [:page_facing_up:Ellis#4980](https://discordapp.com/users/207622442842062849)
-    - For issues **not directly related to the guide content itself**, or for troubleshooting & print help, please use the public help channels in the [:page_facing_up:Voron Discord](https://discord.gg/voron) (or the appropriate community for your printer). 
-    - I can't be everyone's personal troubleshooting assistant - there are lots of people hanging out in the public channels who can help!
+- Если у вас есть вопросы, комментарии или предложения касающиеся руководства, пожалуйста напишите мне или в GitHub issues или через Discord: [:page_facing_up:Ellis#4980](https://discordapp.com/users/207622442842062849)
+    - Для вопросов **не касающихся непосредственно содержимого руководства как такового**, или по вопросам советов по устранению проблем и помощи в печати, пожалуйста используйте наш паблик канал в [:page_facing_up:Voron Discord](https://discord.gg/voron) (или подходящее сообщество по вашему принтеру). 
+    - Я не могу быть персональными помощником каждому - на пабликах тусуется множество людей, которые могут помочь!
 
-- You can find bed the models and textures I am using in [:page_facing_up:Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [:page_facing_up:VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
+- Модели столов и текстуры, которые я использую, можно найти тут [:page_facing_up:Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). Текстуры столов, которые я использовал ранее можно найти тут [:page_facing_up:VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
 
-- Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
+- Спасибо **bythorsthunder** что помогал отлаживать технологии и делал фотографии.
 
-- Support my drinking habits:
+- Поддержка моей привычки прибухнуть:
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
 
-## Icons
-- :warning: = **:exclamation:Please pay extra attention to items marked with this.:exclamation:**
+## Иконки
+- :warning: = **:exclamation:Пожалуйста, обратите особое внимание если видите этот знак.:exclamation:**
 
-- :page_facing_up: = Link to another page.
+- :page_facing_up: = Линк на другую страницу.
 
-- :pushpin: = Jump to section (on same page).
+- :pushpin: = Переход на другую секцию (на той же странице).
 
-# Table of Contents
-- [Before We Begin](/articles/before_we_begin.md)
-    - **:warning: Important Checks**
-- [A Note About Line Width](/articles/a_note_about_line_width.md)
-- [Setting Expectations](/articles/setting_expectations.md)
-- [Voron V2 Gantry Squaring](/articles/voron_v2_gantry_squaring.md)
-- **Print Tuning** \
+# Содержание
+- [Перед началом](/articles/before_we_begin.md)
+    - **:warning: Необходимые условия**
+- [Примечание О Ширине Линии](/articles/a_note_about_line_width.md)
+- [Установка Ожиданий](/articles/setting_expectations.md)
+- [Voron V2 Выравнивание Портала](/articles/voron_v2_gantry_squaring.md)
+- **Настройка печати** \
 *Essentials. Read/follow these in order shown.*
     - [Build Surface Adhesion](/articles/build_surface_adhesion.md)
     - [First Layer Squish](/articles/first_layer_squish.md)

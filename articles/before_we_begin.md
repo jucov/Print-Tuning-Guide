@@ -1,45 +1,45 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+[:arrow_left: Назад к Содержанию](/README.md)
 
 ---
-# Before We Begin
+# Перед началом
 
-Please remember that tuning prints will get you close, but they should not be taken as gospel. **You should get in the habit of finely adjusting based on actual prints afterwards.**
+Пожалуйста, помните, что советы по настройке печати помогут подойти близко к идеалу, но не должны восприниматься как истина. **Вы должны больше опираться на настройки при реальной печати.**
 
-My methods are all purely visual / based on intuition. 
+Все мои методы чисто визуальные/основанные на интуиции.
 
-I avoid using calipers as much as possible for initial tuning, for a few reasons: 
-- Not everyone has high quality calipers.
-- Not everyone uses them in exactly the same way.
-- 3D printing is not completely consistent. 
-    - Wall thicknesses and first layer thicknesses can vary in different places.
-    - Flow characteristics can change at different speeds.
-    - Things like bulges, overextruded areas, and layer misalignments can throw measurements off too. 
+Я старался не использовать штангенциркуль, где это только можно было по следующим причинам: 
+- Не у каждого есть качественный и точный штангенциркуль.
+- Не все используют их одинаково при замерах.
+- 3D печать не всегда постоянна. 
+    - Толщина стенки и толщина первого слоя могут различаться в разных местах.
+    - Характеристики потока могут изменяться на разных скоростях.
+    - Такие вещи, как выпуклости, области где чрезмерная экструзия или несовпадение слоев, также могут искажать измерения. 
 
-I certainly don't mean to imply that calibrating with calipers is wrong or impossible. Many of these things can be mitigated.
+Безусловно я, не имею в виду, что калибровка штангенциркулем неправильна или невозможна. Множество процессов это может сильно облегчит.
 
-I just wanted to share what I have *personally* found to result in the best quality prints. It also becomes more accessible by not requiring quality calipers.
-## :warning: Important Checks
-Before you follow *any* tuning methods in this guide, ensure that:
+Я просто хочу поделиться тем, что я **лично** нашел для улучшения качества печати. И безусловно, технология более доступна, так как не требует качественных штангенциркулей.
+## :warning: Необходимые условия
+До того как вы будете применять *любой* из советов по тюнингу из этого руководства, убедитесь что:
 ### 
-- Voron V2: I highly recommend following my [:page_facing_up:Voron V2 gantry squaring instructions ](/articles/voron_v2_gantry_squaring.md) first.
-- **:warning: Everything is tight (seriously, check again)**
-    - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws, linear rails, and everything in the toolhead. 
-    - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
-- **:warning: Your nozzle is not partially clogged.**
-    - If your nozzle is partially clogged, you may not even notice. You may be able to print, but you will have an **extremely difficult time trying to tune**.
-        - Ensure that you can easily extrude by hand with the filament latch open.
-        - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
-    - Hit it with a nozzle cleaning needle just in case.
+- Voron V2: Я крайне рекомендую пройтись по моей [:page_facing_up:Voron V2 инструкция по выравниванию портала ](/articles/voron_v2_gantry_squaring.md) вначале.
+- **:warning: Все собрано жестко (серьезно, проверьте еще раз)**
+    - Еще раз затяните *каждый винтик* какой сможете найти, *особенно* потайные стопорные винты, матизы, рельсы, и все в печатной голове. 
+    - Я делаю это время от времени, и я часто замечаю, что что то расшаталось, и вызывает у проблемы, которые *чрезвычайно* трудно определить.
+- **:warning: Ваше сопло частично не забито.**
+    - Если ваше сопло частично забито, вы можете даже не заметить. Возможно, вы сможете печатать, но вам будет **чрезвычайно трудно настроить печать**.
+        - Убедитесь, что вы можете легко выдавливать филамент вручную с открытой защелкой экструдера.
+        - Убедитесь, что пластик выпадает прямо из сопла при выдавливании в воздухе. Он не должен стрелять в сторону.
+    - На всякий случай почистите его иглой для чистки форсунок.
 
-- Your thermistors are the correct types in your config. Please double check them.
-    - **:warning: If you use any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [:page_facing_up:bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [:page_facing_up:recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
+- Ваш термистор правильно указан в конфигурации принтера. Пожалуйста, проверьте это дважды. 
+    - **:warning: Если у вас NTC 100K B3950 термистор**, обновите Klipper до самой последней версии и замените все вхождения с `sensor_type: NTC 100K beta 3950` на `sensor_type: Generic 3950` в вашем конфигурационном файле. В старых версиях был [:page_facing_up:bug](https://github.com/Klipper3d/klipper/issues/4054) когда эти показания с этих термисторов были неточными, что было исправлено [:page_facing_up:recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
 
-        - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [:page_facing_up:here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
+        - Обратите внимание, что некоторые функции быстро становятся устаревшими. Если вы давно не обновляли Klipper - пожалуйста прочтите [:page_facing_up:here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) что-бы знать как измпенить конфигурационный файл для того, что бы принтер работал на новой версии Klipper. 
 
-            - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating. See [:page_facing_up:here](/articles/troubleshooting/command_format_mismatch.md).
-- Your motion components are clean, particularly between gear/pulley/idler teeth.
-- Your nozzle is clean.
-- Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.
+            - Иногда надо скомпилировать/перепрошить новую прошивку на вашу плату MCUs если вы получили ошибку "command format mismatch" после обновления. Смотрите [:page_facing_up:here](/articles/troubleshooting/command_format_mismatch.md).
+- Ваши движущиеся компоненты чистые, особенно между шестернями/шкивами/зубьями..
+- Ваше сопло чистое.
+- Ваше сопло было затянуто **на горячую** (если это не Revo), и пластик не вытекает через резьбу вокруг сопла или термобарьера.
 
 ---
-[:arrow_left: Back to Table of Contents](/README.md)
+[:arrow_left: Назад к Содержанию](/README.md)

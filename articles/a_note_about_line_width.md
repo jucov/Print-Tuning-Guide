@@ -1,21 +1,26 @@
+[:arrow_left: Назад к Содержанию](/README.md)
 
-[:arrow_left: Back to Table of Contents](/README.md)
 
 ---
-## A Note About Line Width
-Any line widths in this guide are expressed as a **percentage of nozzle diameter.** \
-This allows the guide to remain agnostic to nozzles.
+## Примечание о ширине линии
+Любая ширина линий в этом руководстве указана в виде **процент от диаметра сопла.** \
+Это позволяет инструкции оставаться независимой от сопел.
 
-SuperSlicer natively allows percentages to be entered this way.
+SuperSlicer изначально позволяет вводить проценты таким образом.
 
 However: 
 - Prusa Slicer bases percentages on layer heights instead.
 - Cura does not allow percentages at all. 
 - Other slicers may or may not support this.
 
-**:warning: For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
-For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
+Однако:
+- Prusa Slicer вычисляет процент от высоты слоя.
+- Cura вообще не позволяет работать с процентами.
+- Другие слайсеры могут поддерживать или не поддерживать это.
+
+**:warning: Для Cura / Prusa Slicer / возможно других, вы ДОЛЖНЫ использовать статические значения ширины линий.** \
+К примеру, указывайте **0.48mm** вместо **120%** если вы используете сопло диаметром 0.4mm.
 
 ---
 
-[:arrow_left: Back to Table of Contents](/README.md)
+[:arrow_left: Назад к Содержанию](/README.md)
