@@ -8,11 +8,6 @@
 
 SuperSlicer изначально позволяет вводить проценты таким образом.
 
-However: 
-- Prusa Slicer bases percentages on layer heights instead.
-- Cura does not allow percentages at all. 
-- Other slicers may or may not support this.
-
 Однако:
 - Prusa Slicer вычисляет процент от высоты слоя.
 - Cura вообще не позволяет работать с процентами.
